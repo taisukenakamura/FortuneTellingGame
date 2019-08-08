@@ -48,11 +48,12 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ipZ-1x-WNR">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ipZ-1x-WNR">
                                 <rect key="frame" x="0.0" y="65.5" width="320" height="142"/>
                                 <date key="date" timeIntervalSinceReferenceDate="586942126.87450302">
                                     <!--2019-08-08 07:28:46 +0000-->
                                 </date>
+                                <locale key="locale" localeIdentifier="ja"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="血液型" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofs-Bc-b3q">
                                 <rect key="frame" x="0.0" y="207.5" width="320" height="28.5"/>
@@ -92,6 +93,9 @@
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.29803921570000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="占う"/>
+                                <connections>
+                                    <action selector="showButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zI3-JJ-B7G"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SxU-lW-pXa">
                                 <rect key="frame" x="0.0" y="389" width="320" height="179"/>
@@ -147,8 +151,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bloodSegment" destination="HFh-QA-1ia" id="YuI-8f-aNg"/>
                         <outlet property="numberLabel" destination="yl0-M3-wl5" id="jBv-8X-YfU"/>
                         <outlet property="resultView" destination="SxU-lW-pXa" id="y3N-B6-k4x"/>
+                        <outlet property="setDatePicker" destination="ipZ-1x-WNR" id="Bxf-mP-9eQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
