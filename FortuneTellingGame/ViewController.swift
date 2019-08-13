@@ -54,7 +54,6 @@ class ViewController: UIViewController{
         let num : Int = ((year + month + day) % 4)
         // 戻り値として返す
         return num
-       
     }
     // スライダーを動く関数
     @IBAction func sliderNumber(_ sender: UISlider) {
@@ -76,17 +75,14 @@ class ViewController: UIViewController{
     
     // データの個数と余り値の個数が血液型の種類数が同一なため、同じ定数に代入して、戻り値として返す。
     // 以下の二つの関数はInt型の戻り値を持つ関数として使う
-    
     func setBloodNumber() -> Int {
         // セグメントで選ばれたものを数値として受け取る
         let num = bloodSegment.selectedSegmentIndex
         // 戻り値
         return num
-        
     }
     
     func setSliderNumber() -> Int {
-        
         // スライダーで選ばれた数字を4で割って、余りの0,1,2,3を代入する
         let num = (sliderN % 4)
         // 戻り値
